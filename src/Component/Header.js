@@ -6,7 +6,7 @@ function Header() {
         <>
       
         <span className="header">
-            <img src={logo}></img>
+            <img src={logo}></img> &emsp; &emsp; &emsp;
             Entertainment Flix
             </span>
             

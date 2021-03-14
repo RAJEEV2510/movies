@@ -8,6 +8,7 @@ import Trending from './Component/Trending';
 import Movies from './Component/Movies';
 import Search from './Component/Search'
 import Webseries from './Component/Webseries'
+import DownloadSeasons from './Component/DownloadSeasons';
 function App() {
   return (
     <>
@@ -33,7 +34,10 @@ function App() {
               <Route path="/search">
                 <Search></Search>
               </Route>
+              <Route path="/downloadseasons" >
+                <DownloadSeasons></DownloadSeasons>
 
+              </Route>
             </Switch>
 
 

@@ -4,6 +4,7 @@ import axios from 'axios'
 import Movie from './Movie'
 import SearchIcon from '@material-ui/icons/Search';
 import './Movies.css'
+import Webserie from './Webserie'
 import CustomPagination from './CustomPagination'
 
 function Webseries() {
@@ -16,10 +17,8 @@ function Webseries() {
 
         
         fetch(`https://myappsmovie.herokuapp.com/webseries/api/${page}`).then(res=>res.json()).then((data)=>{
-
-
-        setMovies(data.result)
-        setNumberOfPages(data.totalpages)
+            setMovies(data.result)
+            setNumberOfPages(data.totalpages)
         })
 
     },[page])
@@ -65,16 +64,16 @@ function Webseries() {
               
              </input>
                   
-            <div className="Webseries"  style={{marginBottom:"50px",marginLeft:"10px",display:"flex",flexDirection:"row",flexWrap:"wrap"}}>
+            <div className="trending"  >
                 {movies?movies.map((movie,index)=>{
                    
                     return (
                     
-                        <Movie key={index} poster={movie.Movie_image_url} title={movie.Movie_name} 
+                        <Webserie key={index} poster={movie.Movie_image_url} title={movie.Movie_name} 
                             id={movie.id}
                             movie_desc={movie.Movie_desc}     
-                            Movie_download_url={movie.Movie_download_url}
-                        ></Movie>
+                            movie={movie}
+                        ></Webserie>
                     )
 
 

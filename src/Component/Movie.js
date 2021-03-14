@@ -54,8 +54,8 @@ function Movie({ poster, title, movie_desc,Movie_download_url}) {
               >
                   
 
-            <div style={{height:"400px",display:'flex',flexDirection:"column"}}>
-                 <img src={poster} onClick={openModal} ></img>
+            <div style={{height:"500px",display:'flex',flexDirection:"column",paddingBottom:"20px"}} onClick={openModal}>
+                 <img src={poster}  ></img>
 
                  <p>
                       {movie_desc}
@@ -64,8 +64,10 @@ function Movie({ poster, title, movie_desc,Movie_download_url}) {
                  <Button variant="contained" color="secondary">
                       <a href={Movie_download_url} style={{textDecoration:"none",color:"white"}}>Download</a>
                 </Button>
-                
-        
+                <hr></hr>  
+          <div>
+
+          </div>
           </div>         
         </Modal>
         </>
