@@ -39,11 +39,11 @@ function Movie({ poster, title, movie_desc,Movie_download_url}) {
         <>
             <div className="media">
             
-                <img src={poster} onClick={openModal}></img>
+                <img src={poster} ></img>
              
                 <b className="title">{title}</b>
                { movie_desc}
-
+              <a href="#" onClick={openModal}>Download</a>
             </div>
             <Modal
               isOpen={modalIsOpen}
@@ -54,8 +54,8 @@ function Movie({ poster, title, movie_desc,Movie_download_url}) {
               >
                   
 
-            <div style={{height:"500px",display:'flex',flexDirection:"column",paddingBottom:"20px"}} onClick={openModal}>
-                 <img src={poster}  ></img>
+            <div style={{height:"400px", width:"300px",overflow:"scroll", display:'flex',flexDirection:"column",paddingBottom:"20px"}} onClick={openModal}>
+                 <img src={poster} style={{height:"300px",width:"300px"}} ></img>
 
                  <p>
                       {movie_desc}
