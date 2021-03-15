@@ -43,7 +43,13 @@ function Movie({ poster, title, movie_desc,Movie_download_url}) {
              
                 <b className="title">{title}</b>
                { movie_desc}
-              <a href="#" onClick={openModal}>Download</a>
+               <button  onClick={openModal} style={{backgroundColor:"green",height:"35px",border:"none",marginTop:"20px",cursor:'pointer',color:"white",
+               borderRadius:"20px"
+               
+              
+              }}>
+                       Download
+              </button>
             </div>
             <Modal
               isOpen={modalIsOpen}
