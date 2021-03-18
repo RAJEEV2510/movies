@@ -9,6 +9,8 @@ import Movies from './Component/Movies';
 import Search from './Component/Search'
 import Webseries from './Component/Webseries'
 import DownloadSeasons from './Component/DownloadSeasons';
+import Contact from './Component/Contact';
+
 function App() {
   return (
     <>
@@ -36,7 +38,9 @@ function App() {
               </Route>
               <Route path="/downloadseasons" >
                 <DownloadSeasons></DownloadSeasons>
-
+              </Route>
+              <Route path="/contact">
+                <Contact></Contact>
               </Route>
             </Switch>
 

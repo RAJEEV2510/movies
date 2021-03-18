@@ -6,6 +6,7 @@ import {useHistory} from 'react-router-dom'
 import WhatshotIcon from '@material-ui/icons/Whatshot';
 import LocalMoviesIcon from '@material-ui/icons/LocalMovies';
 import FindInPageIcon from '@material-ui/icons/FindInPage';
+import ContactMailIcon from '@material-ui/icons/ContactMail';
 import MovieIcon from '@material-ui/icons/Movie';
 const useStyles = makeStyles({
   root: {
@@ -41,9 +42,10 @@ export default function SimpleBottomNavigation() {
 
         history.push("/webseries")
     }
+    
     else{
 
-        history.push('/search')
+        history.push('/contact')
     }
   }, [value])
     
@@ -55,11 +57,11 @@ export default function SimpleBottomNavigation() {
         setValue(newValue);
       }}
       showLabels
-      className={classes.root}
-    >
+      className={classes.root}>
       <BottomNavigationAction label="Trending" icon={<WhatshotIcon />} />
       <BottomNavigationAction label="Movies" icon={<LocalMoviesIcon></LocalMoviesIcon>} />
       <BottomNavigationAction label="Web series" icon={<MovieIcon></MovieIcon>} />
+      <BottomNavigationAction label="Request Movie" icon={<ContactMailIcon></ContactMailIcon>} />
 
     </BottomNavigation>
   );
